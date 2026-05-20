@@ -15,3 +15,6 @@ swift-helper/Package.resolved
 
 # Per-user Claude Code settings
 .claude/settings.local.json
+
+# Editor/IDE
+.vscode/
