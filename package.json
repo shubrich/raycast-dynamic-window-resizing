@@ -1,0 +1,39 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "dynamic-window-resizing",
+  "title": "Dynamic Window Resizing",
+  "description": "Hold the hotkey and move the mouse to resize the frontmost window from its lower-right corner. Release to stop.",
+  "icon": "command-icon.png",
+  "author": "sebastian",
+  "categories": ["Productivity", "System"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "resize-window",
+      "title": "Resize Active Window",
+      "description": "Hold the hotkey and move the mouse to grow/shrink the frontmost window from its lower-right corner. Release the modifiers (or press Escape) to stop.",
+      "mode": "no-view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.80.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "^20.8.10",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "npm run build:helper && ray build",
+    "build:helper": "cd swift-helper && swift build -c release && mkdir -p ../assets && cp .build/release/WindowResizeHelper ../assets/window-resize-helper",
+    "dev": "npm run build:helper && ray develop",
+    "lint": "ray lint",
+    "fix-lint": "ray lint --fix",
+    "publish": "ray publish"
+  },
+  "eslintConfig": {
+    "extends": ["@raycast"]
+  }
+}

@@ -1,0 +1,17 @@
+node_modules/
+.DS_Store
+*.log
+
+# Built helper binary (built locally via `npm run build:helper`)
+assets/window-resize-helper
+
+# Swift build artifacts
+swift-helper/.build/
+swift-helper/.swiftpm/
+swift-helper/Package.resolved
+
+# Raycast build output
+.raycast/
+
+# Per-user Claude Code settings
+.claude/settings.local.json
