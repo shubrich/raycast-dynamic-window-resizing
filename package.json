@@ -6,7 +6,7 @@
   "icon": "command-icon.png",
   "author": "sebastian",
   "categories": ["Productivity", "System"],
-  "license": "MIT",
+  "license": "Unlicense",
   "commands": [
     {
       "name": "resize-window",
